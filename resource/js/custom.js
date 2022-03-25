@@ -232,9 +232,7 @@ require(['jquery'], function($) {
             });
         }
         
-        
         //Move the product label position
-        
         var $prod = $('.product-item-info');
         if($prod.length){
             $prod.each(function(){
@@ -247,7 +245,32 @@ require(['jquery'], function($) {
             });
             
         }
-        
+
+
+        //mobile top button (fixed menu on the bottom)
+        if (mode == 'mo') {
+            if($('.product-bottom-menu').length || $('.main-order-button').length || $('.bottom-fixed-menu').length ){
+                $('#totop').addClass('up');
+            }
+        }
+
+        //mobile search popup 2022.03.11 S
+        if (mode == 'mo') {
+            $('.block-search .label').off().click(function(){
+                $(this).siblings('.control').slideToggle(200, "linear");
+                $(this).parent().siblings('.actions').slideToggle(400, "linear");
+                $(this).parents('.page-header').toggleClass('search-open');
+            }); 
+
+            $('html').click(function(e){
+                if($(e.target).parents('.block-search').length < 1){ 
+                    $('.page-header').removeClass('search-open');
+                    $('.block-search .control').slideUp(200, "linear");
+                    $('.block-search .actions').hide();
+                }
+            });
+        }
+        //mobile search popup 2022.03.11 E
         
 
         
