@@ -648,12 +648,13 @@
     <link rel="stylesheet" type="text/css" media="all"
         href="https://www.illiyoon.com/media/porto/web/css/animate.optimized.css">
     <link rel="stylesheet" type="text/css" media="all" href="https://www.illiyoon.com/media/porto/web/css/header/type2.css">
-    <link rel="stylesheet" type="text/css" media="all" href="../../media/porto/web/css/custom.css">
-    <link rel="stylesheet" type="text/css" media="all" href="../../media/porto/web/css/custom-styles.css">
+    <link rel="stylesheet" type="text/css" media="all" href="https://www.illiyoon.com/media/porto/web/css/custom.css">
+    <link rel="stylesheet" type="text/css" media="all" href="https://www.illiyoon.com/media/porto/web/css/custom-styles.css">
     <link rel="stylesheet" type="text/css" media="all"
         href="https://integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/porto/configed_css/design_kr.css">
     <link rel="stylesheet" type="text/css" media="all" href="https://www.illiyoon.com/media/porto/configed_css/settings_kr.css">
     <link rel="stylesheet" href="../../resource/temp_test/font/font.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../../media/porto/web/css/new_style.css">
     <meta property="og:image"
         content="https://www.illiyoon.com/static/version1645062422/frontend/Smartwave/porto_child/ko_KR/images/illiyoon_kakao_og_img.png" />
     <meta property="twitter:image"
@@ -1105,151 +1106,155 @@
                             action="https://www.illiyoon.com/catalogsearch/result/" method="get">
                             <div class="field search"><label class="label" for="search"
                                     data-role="minisearch-label"><span>검색</span></label>
-                                <div class="control"><input id="search"
-                                        data-mage-init='{"quickSearch":{ "formSelector":"#search_mini_form", "url":"https://www.illiyoon.com/search/ajax/suggest/", "destinationSelector":"#search_autocomplete"} }'
-                                        type="text" name="q" value="" placeholder="" class="input-text" maxlength="128"
-                                        role="combobox" aria-haspopup="false" aria-autocomplete="both"
-                                        autocomplete="off" />
-                                    <div id="search_autocomplete" class="search-autocomplete"></div>
-                                    <div class="nested"><a class="action advanced"
-                                            href="https://www.illiyoon.com/catalogsearch/advanced/"
-                                            data-action="advanced-search">고급 검색</a></div>
-                                    <div class="search-category"
-                                        style="position:absolute; top: 0; right: 35px; width: 130px"><select
-                                            id="mpsearch-category">
-                                            <option value="0">모든 카테고리</option>
-                                            <option value="9">Only 일리윤몰</option>
-                                            <option value="24">- 공식몰 Only</option>
-                                            <option value="27">- BEST</option>
-                                            <option value="30">- NEW</option>
-                                            <option value="33">- 선물하기</option>
-                                            <option value="12">바디케어</option>
-                                            <option value="36">- 피부 고민별</option>
-                                            <option value="39">- 제품 라인별</option>
-                                            <option value="42">- 제품 유형별</option>
-                                            <option value="15">스킨케어</option>
-                                            <option value="45">- 피부 고민별</option>
-                                            <option value="48">- 제품 라인별</option>
-                                            <option value="51">- 제품 유형별</option>
-                                            <option value="18">스페셜케어</option>
-                                            <option value="54">- 제품 유형별</option>
-                                            <option value="21">맘&베이비</option>
-                                            <option value="66">- 피부 고민별</option>
-                                        </select></div>
-                                    <script src="https://www.illiyoon.com/media/mageplaza/search/kr_1.js"></script>
-                                    <script type="text/javascript">
-                                        require([
-                                            'jquery',
-                                            'Magento_Catalog/js/price-utils',
-                                            'mpDevbridgeAutocomplete'
-                                        ], function ($, priceUtils) {
-                                            "use strict";
+                                <div class="control">
+                                    <div class="control-inner"><!-- 2022.03.11 Add a div tag -->
+                                        <!-- 2022.02.22 Add a placeholder : 검색어를 입력해주세요  -->
+                                        <input id="search"
+                                            data-mage-init='{"quickSearch":{ "formSelector":"#search_mini_form", "url":"https://www.illiyoon.com/search/ajax/suggest/", "destinationSelector":"#search_autocomplete"} }'
+                                            type="text" name="q" value="" placeholder="검색어를 입력해주세요" class="input-text" maxlength="128"
+                                            role="combobox" aria-haspopup="false" aria-autocomplete="both"
+                                            autocomplete="off" />
+                                        <div id="search_autocomplete" class="search-autocomplete"></div>
+                                        <div class="nested"><a class="action advanced"
+                                                href="https://www.illiyoon.com/catalogsearch/advanced/"
+                                                data-action="advanced-search">고급 검색</a></div>
+                                        <div class="search-category"
+                                            style="position:absolute; top: 0; right: 35px; width: 130px"><select
+                                                id="mpsearch-category">
+                                                <option value="0">모든 카테고리</option>
+                                                <option value="9">Only 일리윤몰</option>
+                                                <option value="24">- 공식몰 Only</option>
+                                                <option value="27">- BEST</option>
+                                                <option value="30">- NEW</option>
+                                                <option value="33">- 선물하기</option>
+                                                <option value="12">바디케어</option>
+                                                <option value="36">- 피부 고민별</option>
+                                                <option value="39">- 제품 라인별</option>
+                                                <option value="42">- 제품 유형별</option>
+                                                <option value="15">스킨케어</option>
+                                                <option value="45">- 피부 고민별</option>
+                                                <option value="48">- 제품 라인별</option>
+                                                <option value="51">- 제품 유형별</option>
+                                                <option value="18">스페셜케어</option>
+                                                <option value="54">- 제품 유형별</option>
+                                                <option value="21">맘&베이비</option>
+                                                <option value="66">- 피부 고민별</option>
+                                            </select></div>
+                                        <script src="https://www.illiyoon.com/media/mageplaza/search/kr_1.js"></script>
+                                        <script type="text/javascript">
+                                            require([
+                                                'jquery',
+                                                'Magento_Catalog/js/price-utils',
+                                                'mpDevbridgeAutocomplete'
+                                            ], function ($, priceUtils) {
+                                                "use strict";
 
-                                            var baseUrl = 'https://www.illiyoon.com/',
-                                                baseImageUrl =
-                                                'https://www.illiyoon.com/media/catalog/product/',
-                                                priceFormat = {
-                                                    "pattern": "%s\uc6d0",
-                                                    "precision": "0",
-                                                    "requiredPrecision": "0",
-                                                    "decimalSymbol": ".",
-                                                    "groupSymbol": ",",
-                                                    "groupLength": 3,
-                                                    "integerRequired": true,
-                                                    "showMinus": "before_symbol",
-                                                    "symbol": "\uc6d0",
-                                                    "minusSign": ""
-                                                },
-                                                displayInfo = ["price", "image", "description"];
+                                                var baseUrl = 'https://www.illiyoon.com/',
+                                                    baseImageUrl =
+                                                    'https://www.illiyoon.com/media/catalog/product/',
+                                                    priceFormat = {
+                                                        "pattern": "%s\uc6d0",
+                                                        "precision": "0",
+                                                        "requiredPrecision": "0",
+                                                        "decimalSymbol": ".",
+                                                        "groupSymbol": ",",
+                                                        "groupLength": 3,
+                                                        "integerRequired": true,
+                                                        "showMinus": "before_symbol",
+                                                        "symbol": "\uc6d0",
+                                                        "minusSign": ""
+                                                    },
+                                                    displayInfo = ["price", "image", "description"];
 
-                                            var categorySelect = $('#mpsearch-category'),
-                                                searchInput = $('#search');
-                                            if (categorySelect.length) {
-                                                categorySelect.on('change', function () {
-                                                    searchInput.focus();
+                                                var categorySelect = $('#mpsearch-category'),
+                                                    searchInput = $('#search');
+                                                if (categorySelect.length) {
+                                                    categorySelect.on('change', function () {
+                                                        searchInput.focus();
 
-                                                    if ($(this).val() === 0) {
-                                                        $(this).removeAttr('name');
-                                                    } else {
-                                                        $(this).attr('name', 'cat');
-                                                    }
-                                                });
-                                            }
-
-                                            searchInput.devbridgeAutocomplete({
-                                                lookup: mageplazaSearchProducts,
-                                                lookupLimit: 10,
-                                                maxHeight: 2000,
-                                                minChars: 1,
-                                                lookupFilter: function (suggestion, query,
-                                                    queryLowerCase) {
-                                                    if (categorySelect.length) {
-                                                        var categoryId = categorySelect.val();
-                                                        if (categoryId > 0 && ($.inArray(categoryId,
-                                                                suggestion.c) === -1)) {
-                                                            return false;
+                                                        if ($(this).val() === 0) {
+                                                            $(this).removeAttr('name');
+                                                        } else {
+                                                            $(this).attr('name', 'cat');
                                                         }
-                                                    }
-
-                                                    return suggestion.value.toLowerCase().indexOf(
-                                                        queryLowerCase) !== -1;
-                                                },
-                                                onSelect: function (suggestion) {
-                                                    window.location.href = correctProductUrl(
-                                                        suggestion.u);
-                                                },
-                                                formatResult: function (suggestion, currentValue) {
-                                                    var html = '<a href="' + correctProductUrl(
-                                                        suggestion.u) + '">';
-
-                                                    if ($.inArray('image', displayInfo) !== -1) {
-                                                        html +=
-                                                            '<div class="suggestion-left"><img class="img-responsive" src="' +
-                                                            correctProductUrl(suggestion.i, true) +
-                                                            '" alt="" /></div>';
-                                                    }
-
-                                                    html += '<div class="suggestion-right">';
-                                                    html +=
-                                                        '<div class="product-line product-name">' +
-                                                        suggestion.value + '</div>';
-
-                                                    if ($.inArray('price', displayInfo) !== -1) {
-                                                        html +=
-                                                            '<div class="product-line product-price">Price: ' +
-                                                            priceUtils.formatPrice(suggestion.p,
-                                                                priceFormat) + '</div>';
-                                                    }
-
-                                                    if ($.inArray('description', displayInfo) !== -
-                                                        1 && suggestion.d) {
-                                                        html +=
-                                                            '<div class="product-des"><p class="short-des">' +
-                                                            suggestion.d + '...</p></div>';
-                                                    }
-
-                                                    html += '</div></a>';
-
-                                                    return html;
+                                                    });
                                                 }
 
+                                                searchInput.devbridgeAutocomplete({
+                                                    lookup: mageplazaSearchProducts,
+                                                    lookupLimit: 10,
+                                                    maxHeight: 2000,
+                                                    minChars: 1,
+                                                    lookupFilter: function (suggestion, query,
+                                                        queryLowerCase) {
+                                                        if (categorySelect.length) {
+                                                            var categoryId = categorySelect.val();
+                                                            if (categoryId > 0 && ($.inArray(categoryId,
+                                                                    suggestion.c) === -1)) {
+                                                                return false;
+                                                            }
+                                                        }
+
+                                                        return suggestion.value.toLowerCase().indexOf(
+                                                            queryLowerCase) !== -1;
+                                                    },
+                                                    onSelect: function (suggestion) {
+                                                        window.location.href = correctProductUrl(
+                                                            suggestion.u);
+                                                    },
+                                                    formatResult: function (suggestion, currentValue) {
+                                                        var html = '<a href="' + correctProductUrl(
+                                                            suggestion.u) + '">';
+
+                                                        if ($.inArray('image', displayInfo) !== -1) {
+                                                            html +=
+                                                                '<div class="suggestion-left"><img class="img-responsive" src="' +
+                                                                correctProductUrl(suggestion.i, true) +
+                                                                '" alt="" /></div>';
+                                                        }
+
+                                                        html += '<div class="suggestion-right">';
+                                                        html +=
+                                                            '<div class="product-line product-name">' +
+                                                            suggestion.value + '</div>';
+
+                                                        if ($.inArray('price', displayInfo) !== -1) {
+                                                            html +=
+                                                                '<div class="product-line product-price">Price: ' +
+                                                                priceUtils.formatPrice(suggestion.p,
+                                                                    priceFormat) + '</div>';
+                                                        }
+
+                                                        if ($.inArray('description', displayInfo) !== -
+                                                            1 && suggestion.d) {
+                                                            html +=
+                                                                '<div class="product-des"><p class="short-des">' +
+                                                                suggestion.d + '...</p></div>';
+                                                        }
+
+                                                        html += '</div></a>';
+
+                                                        return html;
+                                                    }
 
 
 
 
 
+
+                                                });
+
+                                                function correctProductUrl(urlKey, isImage) {
+                                                    if (urlKey.search('http') !== -1) {
+                                                        return urlKey;
+                                                    }
+
+                                                    return ((typeof isImage !== 'undefined') ? baseImageUrl :
+                                                        baseUrl) + urlKey;
+                                                }
                                             });
-
-                                            function correctProductUrl(urlKey, isImage) {
-                                                if (urlKey.search('http') !== -1) {
-                                                    return urlKey;
-                                                }
-
-                                                return ((typeof isImage !== 'undefined') ? baseImageUrl :
-                                                    baseUrl) + urlKey;
-                                            }
-                                        });
-                                    </script>
+                                        </script>
+                                    </div>
                                 </div>
                             </div>
                             <div class="actions"><button type="submit" ap-click-area="GNB" ap-click-data="검색"
