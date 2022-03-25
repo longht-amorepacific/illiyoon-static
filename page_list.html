@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page List</title>
+    <style>
+        body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption{margin:0; padding:0;}
+        a {color: #242424; text-decoration: none;}
+        a:hover {color: #4287f5;}
+        body, input, textarea, select, button, table {font-family:'Arial',sans-serif; font-size:14px; color: #999; line-height: 1; font-weight:400;}
+        em,address {font-style: normal;}        
+        ul,li,ol {list-style:none;}
+        h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+        img,fieldset {border:0 none;}
+        .hidden {width:0; height:0; position:absolute; left:-9999px; top:0; color:#fff; font-size:0; overflow:hidden;}
+        header {display:flex;align-items:center;justify-content: space-between; padding:20px 30px;background-color:rgba(0,0,0,.8);}
+        header h1 {color:#fff;font-size:15px;}
+        header  h1 > span {color:#fff;font-weight:500;}
+        header .date {color:#fff;}
+        .tableArea {padding:20px 30px;}
+        table {width:100%;border-collapse: collapse; border-spacing:0px;border-bottom:4px solid #242424;border-top:4px solid #242424;}
+        table th {background-color:#292929;color:#fff;font-size:11px;font-weight:400;}
+        table th.last {border-right:0}
+        table th, table td {border-right:1px solid #999;border-bottom:1px solid #999;padding:10px;line-height:1.3;}
+        table td:last-child {border-right:0;}
+        .title {font-weight:700;font-size:15px;}
+        .title td {border-top:2px solid #242424;color:#000;}
+        table td.center {text-align:center;}
+        table td a {color:#999;}
+        .noticeArea {padding:20px 30px 0;}
+        .noticeArea li {line-height:1.5;color:#000;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><span>ILLIYOON</span> Publishing Page List</h1>
+            <span class="date">Update. 2022.02.28</span>
+        </header>
+        <div class="noticeArea">
+            <ul>
+                <li>- The revised part of the first range is annotated as 2022.02.22</li>
+                <li>- Please edit the theme.min.js first.</li>
+                <li>- The revised css files are custom.css/custom-style.css/styles-l.css</li>
+                <li>- The file in the 'media' folder was created to match the path. Put it in the same way as the path.</li>
+                <li>- Please put the files in the 'resource' according to the actual website path.</li>
+                <li>- Please ignore 'temp_test' folder as files to check publishing output.</li>
+            </ul>
+        </div>
+        <div class="tableArea">
+            <table>
+                <colgroup>
+                    <col style="width:12%">
+                    <col style="width:12%">
+                    <col style="width:13%">
+                    <col style="width:13%">
+                    <col style="width:20%">
+                    <col style="width:30%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="3">Page Depth</th>
+                        <th rowspan="2">File Name</th>
+                        <th rowspan="2">Page Link</th>
+                        <th rowspan="2" class="last">note</th>
+                    </tr>
+                    <tr>
+                        <th>1depth</th>
+                        <th>2depth</th>
+                        <th>3depth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="title">
+                        <td colspan="6">Common</td>
+                    </tr>
+                    <tr>
+                        <td>GNB</td>
+                        <td></td>
+                        <td></td>
+                        <td>gnb<br>
+                            gnb_login<br>
+                            gnb_openMinicart<br>
+                            gnb_openMinisearch_mo<br>
+                            gnb_openMobileLnb
+                        </td>
+                        <td>
+                            <a href="html/common/gnb.html" target="_blank">html/common/gnb.html</a><br>
+                            <a href="html/common/gnb_login.html" target="_blank">html/common/gnb_login.html</a><br>
+                            <a href="html/common/gnb_openMinicart.html" target="_blank">html/common/gnb_openMinicart.html</a><br>
+                            <!-- <a href="html/common/gnb_openMinisearch_mo.html" target="_blank">html/common/gnb_openMinisearch_mo.html</a><br> -->
+                            <a href="html/common/gnb_openMobileLNB.html" target="_blank">html/common/gnb_openMobileLNB.html</a>
+                        </td>
+                        <td>Mobile search box pop-up will be added</td>
+                    </tr>
+                    <tr class="title">
+                        <td colspan="6">Product</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Product List</td>
+                        <td></td>
+                        <td></td>
+                        <td>product_list_sample<br>
+                            product_list<br>
+                            product_list_category
+                        </td>
+                        <td>
+                            <a href="html/product/product_list_sample.html" target="_blank">html/product/product_list_sample.html</a><br>
+                            <a href="html/product/product_list.html" target="_blank">html/product/product_list.html</a><br>
+                            <a href="html/product/product_list_category.html" target="_blank">html/product/product_list_category.html</a>
+                        </td>
+                        <td>The 'product_list_sample' file has a newly added <br>
+                            1."공식몰ONLY" label,<br>
+                            2. an activated button when clicking on the wishlist(heart icon),<br>
+                            3. a discount rate.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Product Detail</td>
+                        <td></td>
+                        <td>product_detail</td>
+                        <td><a href="html/product/product_detail.html" target="_blank">html/product/product_detail.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="title">
+                        <td colspan="6">Cart</td>
+                    </tr>
+                    <tr>
+                        <td>Cart</td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            cart<br>
+                            cart_maxAlert<br>
+                            cart_outOfstockAlert
+                        </td>
+                        <td>
+                            <a href="html/cart/cart.html" target="_blank">cart.html</a><br>
+                            <a href="html/cart/cart_maxAlert.html" target="_blank">cart_maxAlert.html</a><br>
+                            <a href="html/cart/cart_outOfstockAlert.html" target="_blank">cart_outOfstockAlert.html</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="title">
+                        <td colspan="6">CS</td>
+                    </tr>
+                    <tr>
+                        <td>CS</td>
+                        <td></td>
+                        <td></td>
+                        <td>customer_center_noresult</td>
+                        <td><a href="html/cs/customer_center_noresult.html" target="_blank">customer_center_noresult.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr class="title">
+                        <td colspan="6">Search</td>
+                    </tr>
+                    <tr>
+                        <td>search</td>
+                        <td></td>
+                        <td></td>
+                        <td>search</td>
+                        <td><a href="html/search/search_noresult.html" target="_blank">search_noresult.html</a></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

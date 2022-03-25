@@ -1,0 +1,8 @@
+
+@font-face {
+    font-family: 'porto-icons';
+    src: url('porto-icons.woff2') format('woff2'),url('porto-icons.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block
+}
