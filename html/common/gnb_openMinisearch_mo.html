@@ -613,7 +613,7 @@
     <meta property="twitter:description" content="&#xC77C;&#xB9AC;&#xC724;&#x20;&#xACF5;&#xC2DD;&#xBAB0;,&#x20;&#xAE4C;&#xB2E4;&#xB85C;&#xC6B4;&#x20;&#xD55C;&#xAD6D;&#xC778;&#xC758;&#x20;&#xBBFC;&#xAC10;&#x20;&#xD53C;&#xBD80;&#x20;&#xACE0;&#xBBFC;&#xC5D0;&#x20;&#xB300;&#xD55C;&#x20;&#xC21C;&#xD558;&#xACE0;&#x20;&#xAC15;&#xB825;&#xD55C;&#x20;&#xB2F5;.&#x20;&#x7C;&#x20;&#xC77C;&#xB9AC;&#xC724;" />
     <link rel="canonical" href="https://www.illiyoon.com/">
     <link rel="stylesheet" href="../../resource/temp_test/font/font.css">
-    <link rel="stylesheet" type="text/css" media="all" href="../../media/porto/web/css/new_style.css">
+    <link rel="stylesheet" href="../../media/porto/web/css/new_style.css">
     <script>
         var dataLayer = window.dataLayer || [];
         window.dataLayer = window.dataLayer || [];
@@ -1054,130 +1054,128 @@
                     <div class="block block-title"><strong>검색</strong></div>
                     <div class="block block-content">
                         <form class="form minisearch active" id="search_mini_form" action="https://www.illiyoon.com/catalogsearch/result/" method="get">
-                            
+                            <!-- 2022.02.22 Add a placeholder : 검색어를 입력해주세요  -->
                             <div class="field search"><label class="label active" for="search" data-role="minisearch-label"><span>검색</span></label>
                                 <div class="control" style="display:block;">
 
                                     <div class="control-inner"><!-- 2022.03.11 Add a div tag -->
-                                        <!-- 2022.02.22 Add a placeholder : 검색어를 입력해주세요  -->
-                                        <input id="search" data-mage-init='{"quickSearch":{ "formSelector":"#search_mini_form", "url":"https://www.illiyoon.com/search/ajax/suggest/", "destinationSelector":"#search_autocomplete"} }' type="text" placeholder="검색어를 입력해주세요" class="input-text"/>
+                                    <input id="search" data-mage-init='{"quickSearch":{ "formSelector":"#search_mini_form", "url":"https://www.illiyoon.com/search/ajax/suggest/", "destinationSelector":"#search_autocomplete"} }' type="text" placeholder="검색어를 입력해주세요" class="input-text"/>
                                     
-                                        <div id="search_autocomplete" class="search-autocomplete"></div>
-                                        <div class="nested"><a class="action advanced" href="https://www.illiyoon.com/catalogsearch/advanced/" data-action="advanced-search">고급 검색</a></div>
-                                        <div class="search-category" style="position:absolute; top: 0; right: 35px; width: 130px"><select id="mpsearch-category">
-                                                <option value="0">모든 카테고리</option>
-                                                <option value="9">Only 일리윤몰</option>
-                                                <option value="24">- 공식몰 Only</option>
-                                                <option value="27">- BEST</option>
-                                                <option value="30">- NEW</option>
-                                                <option value="33">- 선물하기</option>
-                                                <option value="12">바디케어</option>
-                                                <option value="36">- 피부 고민별</option>
-                                                <option value="39">- 제품 라인별</option>
-                                                <option value="42">- 제품 유형별</option>
-                                                <option value="15">스킨케어</option>
-                                                <option value="45">- 피부 고민별</option>
-                                                <option value="48">- 제품 라인별</option>
-                                                <option value="51">- 제품 유형별</option>
-                                                <option value="18">스페셜케어</option>
-                                                <option value="54">- 제품 유형별</option>
-                                                <option value="21">맘&베이비</option>
-                                                <option value="66">- 피부 고민별</option>
-                                            </select></div>
-                                        <script src="https://www.illiyoon.com/media/mageplaza/search/kr_0.js"></script>
-                                        <script type="text/javascript">
-                                            require([
-                                                'jquery',
-                                                'Magento_Catalog/js/price-utils',
-                                                'mpDevbridgeAutocomplete'
-                                            ], function($, priceUtils) {
-                                                "use strict";
+                                    <div id="search_autocomplete" class="search-autocomplete"></div>
+                                    <div class="nested"><a class="action advanced" href="https://www.illiyoon.com/catalogsearch/advanced/" data-action="advanced-search">고급 검색</a></div>
+                                    <div class="search-category" style="position:absolute; top: 0; right: 35px; width: 130px"><select id="mpsearch-category">
+                                            <option value="0">모든 카테고리</option>
+                                            <option value="9">Only 일리윤몰</option>
+                                            <option value="24">- 공식몰 Only</option>
+                                            <option value="27">- BEST</option>
+                                            <option value="30">- NEW</option>
+                                            <option value="33">- 선물하기</option>
+                                            <option value="12">바디케어</option>
+                                            <option value="36">- 피부 고민별</option>
+                                            <option value="39">- 제품 라인별</option>
+                                            <option value="42">- 제품 유형별</option>
+                                            <option value="15">스킨케어</option>
+                                            <option value="45">- 피부 고민별</option>
+                                            <option value="48">- 제품 라인별</option>
+                                            <option value="51">- 제품 유형별</option>
+                                            <option value="18">스페셜케어</option>
+                                            <option value="54">- 제품 유형별</option>
+                                            <option value="21">맘&베이비</option>
+                                            <option value="66">- 피부 고민별</option>
+                                        </select></div>
+                                    <script src="https://www.illiyoon.com/media/mageplaza/search/kr_0.js"></script>
+                                    <script type="text/javascript">
+                                        require([
+                                            'jquery',
+                                            'Magento_Catalog/js/price-utils',
+                                            'mpDevbridgeAutocomplete'
+                                        ], function($, priceUtils) {
+                                            "use strict";
 
-                                                var baseUrl = 'https://www.illiyoon.com/',
-                                                    baseImageUrl = 'https://www.illiyoon.com/media/catalog/product/',
-                                                    priceFormat = {
-                                                        "pattern": "%s\uc6d0",
-                                                        "precision": "0",
-                                                        "requiredPrecision": "0",
-                                                        "decimalSymbol": ".",
-                                                        "groupSymbol": ",",
-                                                        "groupLength": 3,
-                                                        "integerRequired": true,
-                                                        "showMinus": "before_symbol",
-                                                        "symbol": "\uc6d0",
-                                                        "minusSign": ""
-                                                    },
-                                                    displayInfo = ["price", "image", "description"];
+                                            var baseUrl = 'https://www.illiyoon.com/',
+                                                baseImageUrl = 'https://www.illiyoon.com/media/catalog/product/',
+                                                priceFormat = {
+                                                    "pattern": "%s\uc6d0",
+                                                    "precision": "0",
+                                                    "requiredPrecision": "0",
+                                                    "decimalSymbol": ".",
+                                                    "groupSymbol": ",",
+                                                    "groupLength": 3,
+                                                    "integerRequired": true,
+                                                    "showMinus": "before_symbol",
+                                                    "symbol": "\uc6d0",
+                                                    "minusSign": ""
+                                                },
+                                                displayInfo = ["price", "image", "description"];
 
-                                                var categorySelect = $('#mpsearch-category'),
-                                                    searchInput = $('#search');
-                                                if (categorySelect.length) {
-                                                    categorySelect.on('change', function() {
-                                                        searchInput.focus();
+                                            var categorySelect = $('#mpsearch-category'),
+                                                searchInput = $('#search');
+                                            if (categorySelect.length) {
+                                                categorySelect.on('change', function() {
+                                                    searchInput.focus();
 
-                                                        if ($(this).val() === 0) {
-                                                            $(this).removeAttr('name');
-                                                        } else {
-                                                            $(this).attr('name', 'cat');
-                                                        }
-                                                    });
-                                                }
-
-                                                searchInput.devbridgeAutocomplete({
-                                                    lookup: mageplazaSearchProducts,
-                                                    lookupLimit: 10,
-                                                    maxHeight: 2000,
-                                                    minChars: 1,
-                                                    lookupFilter: function(suggestion, query, queryLowerCase) {
-                                                        if (categorySelect.length) {
-                                                            var categoryId = categorySelect.val();
-                                                            if (categoryId > 0 && ($.inArray(categoryId, suggestion.c) === -1)) {
-                                                                return false;
-                                                            }
-                                                        }
-
-                                                        return suggestion.value.toLowerCase().indexOf(queryLowerCase) !== -1;
-                                                    },
-                                                    onSelect: function(suggestion) {
-                                                        window.location.href = correctProductUrl(suggestion.u);
-                                                    },
-                                                    formatResult: function(suggestion, currentValue) {
-                                                        var html = '<a href="' + correctProductUrl(suggestion.u) + '">';
-
-                                                        if ($.inArray('image', displayInfo) !== -1) {
-                                                            html += '<div class="suggestion-left"><img class="img-responsive" src="' + correctProductUrl(suggestion.i, true) + '" alt="" /></div>';
-                                                        }
-
-                                                        html += '<div class="suggestion-right">';
-                                                        html += '<div class="product-line product-name">' + suggestion.value + '</div>';
-
-                                                        if ($.inArray('price', displayInfo) !== -1) {
-                                                            html += '<div class="product-line product-price">Price: ' + priceUtils.formatPrice(suggestion.p, priceFormat) + '</div>';
-                                                        }
-
-                                                        if ($.inArray('description', displayInfo) !== -1 && suggestion.d) {
-                                                            html += '<div class="product-des"><p class="short-des">' + suggestion.d + '...</p></div>';
-                                                        }
-
-                                                        html += '</div></a>';
-
-                                                        return html;
-                                                    },
-                                                    appendTo: '.control-inner' // 2022.03.08 Add "appendTo"
-
+                                                    if ($(this).val() === 0) {
+                                                        $(this).removeAttr('name');
+                                                    } else {
+                                                        $(this).attr('name', 'cat');
+                                                    }
                                                 });
+                                            }
 
-                                                function correctProductUrl(urlKey, isImage) {
-                                                    if (urlKey.search('http') !== -1) {
-                                                        return urlKey;
+                                            searchInput.devbridgeAutocomplete({
+                                                lookup: mageplazaSearchProducts,
+                                                lookupLimit: 10,
+                                                maxHeight: 2000,
+                                                minChars: 1,
+                                                lookupFilter: function(suggestion, query, queryLowerCase) {
+                                                    if (categorySelect.length) {
+                                                        var categoryId = categorySelect.val();
+                                                        if (categoryId > 0 && ($.inArray(categoryId, suggestion.c) === -1)) {
+                                                            return false;
+                                                        }
                                                     }
 
-                                                    return ((typeof isImage !== 'undefined') ? baseImageUrl : baseUrl) + urlKey;
-                                                }
-                                            });
-                                        </script>
-                                    </div>
+                                                    return suggestion.value.toLowerCase().indexOf(queryLowerCase) !== -1;
+                                                },
+                                                onSelect: function(suggestion) {
+                                                    window.location.href = correctProductUrl(suggestion.u);
+                                                },
+                                                formatResult: function(suggestion, currentValue) {
+                                                    var html = '<a href="' + correctProductUrl(suggestion.u) + '">';
 
+                                                    if ($.inArray('image', displayInfo) !== -1) {
+                                                        html += '<div class="suggestion-left"><img class="img-responsive" src="' + correctProductUrl(suggestion.i, true) + '" alt="" /></div>';
+                                                    }
+
+                                                    html += '<div class="suggestion-right">';
+                                                    html += '<div class="product-line product-name">' + suggestion.value + '</div>';
+
+                                                    if ($.inArray('price', displayInfo) !== -1) {
+                                                        html += '<div class="product-line product-price">Price: ' + priceUtils.formatPrice(suggestion.p, priceFormat) + '</div>';
+                                                    }
+
+                                                    if ($.inArray('description', displayInfo) !== -1 && suggestion.d) {
+                                                        html += '<div class="product-des"><p class="short-des">' + suggestion.d + '...</p></div>';
+                                                    }
+
+                                                    html += '</div></a>';
+
+                                                    return html;
+                                                },
+                                                appendTo: '.control-inner' // 2022.03.08 Add "appendTo"
+
+                                            });
+
+                                            function correctProductUrl(urlKey, isImage) {
+                                                if (urlKey.search('http') !== -1) {
+                                                    return urlKey;
+                                                }
+
+                                                return ((typeof isImage !== 'undefined') ? baseImageUrl : baseUrl) + urlKey;
+                                            }
+                                        });
+                                    </script>
+                                    </div>
                                 </div>
                             </div>
                             <div class="actions" style="display:block;"><button type="submit" ap-click-area="GNB" ap-click-data="검색" ap-click-name="GNB검색" title="검색" class="action search"><span>검색</span></button></div>

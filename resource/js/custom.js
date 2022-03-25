@@ -254,7 +254,7 @@ require(['jquery'], function($) {
             }
         }
 
-        //mobile search popup 2022.03.11 S
+        //mobile search popup 2022.03.11
         if (mode == 'mo') {
             $('.block-search .label').off().click(function(){
                 $(this).siblings('.control').slideToggle(200, "linear");
@@ -270,8 +270,9 @@ require(['jquery'], function($) {
                 }
             });
         }
-        //mobile search popup 2022.03.11 E
-        
+              
+       
+
 
         
     });
