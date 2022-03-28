@@ -2318,6 +2318,14 @@ div.product-labels .product-label.only-label {
     padding: 3px 5px 3px;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .products-grid .product-item {
+    padding: 10px !important;
+  }
+  div.product-labels div.product-label {
+    font-size: 9px;
+  }
+}
 /*----- product info End -----*/
 /*----- product detail : bottom/middle GNB Start -----*/
 @media only screen and (min-width: 768px) {
