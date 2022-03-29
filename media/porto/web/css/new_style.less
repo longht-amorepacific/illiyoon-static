@@ -2116,7 +2116,7 @@ span {
 		}
 		.product-item-info {
 			.product-item-details {
-				padding: 32px 0 !important;//2022.03.23
+				padding: 10px 0 32px !important;//2022.03.23 //2022.03.29
 				text-align: left;
 				position:relative !important;//2022.03.23
 				.product-item-name {//2022.03.23
@@ -2528,10 +2528,12 @@ div.ap-sold-out-sticker-wrapper {
 	}
 }
 div.product-labels {
-	margin-bottom: 7px;
-	position: absolute;//2022.03.23
+	margin-bottom: 3px;//2022.03.29
+	position: static;//2022.03.23 //2022.03.29
 	top: 10px;//2022.03.23
 	right: auto;
+	display:flex;//2022.03.29
+	flex-wrap:wrap;//2022.03.29
 	flex-direction: row;
 	.product-label {
 		display: inline-block;
@@ -2541,16 +2543,18 @@ div.product-labels {
 		font-weight: 400;
 		padding: 0 4px;
 		border-radius: 2px;
-		+ .product-label {
-			margin-left: 4px;
+		margin:0 4px 4px 0;//2022.03.29
+		&:last-child {//2022.03.29
+			margin-right:0;
 		}
 	}
 	.product-label.new-label {
 		background-color: #38A1F9;
-		margin-bottom: 0 !important;
+		margin-bottom: 4px !important;//2022.03.29
 	}
 	.product-label.sale-label {
 		background-color: #D4415E !important;
+		margin-bottom: 4px !important;//2022.03.29
 	}
 	.product-label.only-label {
 		background-color: #FF9533;
@@ -2583,7 +2587,7 @@ div.product-labels {
 			}
 			.product-item-info {
 				.product-item-details {
-					padding: 48px 0 0 !important;//2022.03.23
+					padding: 20px 0 0 !important;//2022.03.23 //2022.03.29
 					text-align: left;
 					.product-item-name {//2022.03.23
 						height:48px !important;
@@ -2840,6 +2844,18 @@ div.product-labels {
 		}
 	}
 }
+//2022.03.28 Start
+@media only screen and (min-width:768px) and (max-width:1000px){
+	.products-grid .product-item {
+		padding:10px !important;
+	}
+	div.product-labels{
+		div.product-label {
+			font-size:9px;
+		}
+	}
+}
+//2022.03.28 End
 /*----- product info End -----*/
 
 /*----- product detail : bottom/middle GNB Start -----*/
