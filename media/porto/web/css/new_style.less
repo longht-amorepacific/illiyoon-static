@@ -197,6 +197,7 @@ span {
 				top: 38px;
 				right: auto;
 				margin-top: 0;
+				padding-right:0;//2022.03.31
 				p {
 					font-size: 16px;
 					font-weight: 500;
@@ -759,6 +760,7 @@ span {
 					color: #111;
 					>span {
 						font-family: 'Spoqa Han Sans Neo', sans-serif !important;
+						font-weight: 500;//2022.03.31
 					}
 				}
 			}
@@ -981,7 +983,7 @@ span {
 		}
 	}
 	.navigation {
-		.parent {
+		.ui-menu-item {//2022.03.31 chage class
 			.level-top {
 				&:after {
 					content: '';
@@ -989,6 +991,7 @@ span {
 					height: 11px;
 					background: url('../../../images/icon/button_arrow_right_mo.png') no-repeat;
 					background-size: 100% auto;
+					position:absolute;//2022.03.31
 					top: 18px;
 					right: 9px;
 				}
@@ -1322,6 +1325,7 @@ span {
 					ul {
 						display: flex;
 						justify-content: center;
+						flex-wrap:wrap;//2022.03.31
 					}
 				}
 				.depth-item {
@@ -1545,6 +1549,11 @@ span {
 			}
 		}
 	}
+	.events-index-index { // 2022.03.31
+		.page-top {
+			padding:0 24px;
+		}
+	}
     /* 2022.03.15 Strat */
 	.products {
 		.product-item-photo {
@@ -1716,7 +1725,7 @@ span {
 				li.item {
 					a {
 						font-size: 14px;
-						line-height: 1.3;
+						line-height: 1;//2022.03.31
 						font-weight: 500;
 						cursor: default;
 						text-decoration: none;
@@ -1724,7 +1733,7 @@ span {
 					}
 					strong {
 						font-size: 14px;
-						line-height: 1.3;
+						line-height: normal;//2022.03.31
 						font-weight: 500;
 						cursor: default;
 						text-decoration: none;
@@ -1752,7 +1761,7 @@ span {
 			}
 			.item.home {
 				margin-right: 10px;
-				line-height: 19px;
+				line-height: 1;//2022.03.31
 			}
 			.item.breadcrumbs-drop {
 				display: inline-block;
@@ -2116,7 +2125,7 @@ span {
 		}
 		.product-item-info {
 			.product-item-details {
-				padding: 32px 0 !important;//2022.03.23
+				padding: 10px 0 32px !important;//2022.03.23 //2022.03.29
 				text-align: left;
 				position:relative !important;//2022.03.23
 				.product-item-name {//2022.03.23
@@ -2145,6 +2154,7 @@ span {
 					font-size: 11px;
 					color: #727982;
 					/* 2022.03.15 End */
+					margin-right:0;//2022.03.31
 				}
 			}
 			.price {
@@ -2157,7 +2167,7 @@ span {
 		}
 		.old-price {
 			margin-right: 0;
-			margin-left: 4px;
+			margin-left: 0;//2022.03.31
 		}
 		form+.product-item-inner {
 			margin-top: 0;
@@ -2235,6 +2245,7 @@ span {
 .products-list {
 	.product-item {
 		.product-item-photo {
+			margin-bottom:0;//2022.03.31
 			a {
 				position: relative;
 				height: 0;
@@ -2245,6 +2256,89 @@ span {
 				border-radius: 4px;
 			}
 		}
+		//2022.03.31 Start
+		.product-item-info {
+			.product-item-details {
+				text-align: left;
+				position:relative !important;
+				padding-bottom:0;
+				.product-labels {
+					margin-bottom:0;
+					.product-label {
+						margin-bottom:0 !important;
+					}
+				}
+				.product-item-name {
+					margin:7px 0 3px;
+					.product-item-link {
+						text-decoration:none;
+						&:hover {
+							color:#111;
+						}
+					}
+				}
+				.price-box {
+					margin: 0 0 3px 0;
+					display:flex;
+					justify-content: flex-end;
+					align-items:center;
+					flex-direction: row-reverse;
+					.sale-percent {
+						font-size: 15px;
+						line-height: 22px;
+						color: #D4415E;
+						font-weight: 500;
+						margin-right: 2px;
+					}
+					.old-price { 
+						span.price {
+							font-size: 11px;
+							color: #727982;
+						}
+					}
+					.price {
+						font-size: 15px;
+						line-height: 1.6;
+						margin-right: 4px;
+						font-weight: 500;
+						color: #111;
+					}
+				}
+				.old-price {
+					margin-right: 0;
+					margin-left: 4px;
+					span.price {
+						font-weight:400;
+					}
+				}
+				.product-reviews-summary {
+					margin-bottom:3px;
+				}
+				.product-item-inner {
+					margin-top:0;
+					.product-item-actions {
+						display:flex;
+						align-items: center;
+						flex-direction: row-reverse;
+						justify-content:flex-end;	
+						.actions-primary {
+							margin-bottom:0;
+							margin-left:4px;
+						}
+						.towishlist {
+							border:0;
+							display:inline-block;
+							width:30px;
+							height:24px;
+						}
+					}
+				}
+				.product-item-description {
+					display:none;
+				}
+			}
+		}
+		//2022.03.31 End
 	}
 	.product-item-photo {
 		.product-image-photo {
@@ -2276,12 +2370,15 @@ span {
 		.rating-result {
 			&:before {
 				color: #E9EBEE;
+				font-size:12px !important;//2022.03.31
 			}
 		}
 		div.rating-result {
+			width:68px !important;//2022.03.31
 			>span {
 				&:before {
 					color: #FFBA33;
+					font-size:12px !important;//2022.03.31
 				}
 			}
 		}
@@ -2413,22 +2510,26 @@ span.old-price {
 div.product-reviews-summary {
 	.reviews-actions {
 		a.view {
+			padding-top:0 !important;//2022.03.31
 			padding-left: 10px;
 			margin-left: 10px !important;
 			border-left: 0;
 			position: relative;
 			text-decoration: none;
+			font-size: 12px !important;//2022.03.31
+			font-weight:400;//2022.03.31
 			&::before {
 				content: '';
 				width: 1px;
 				height: 10px;
 				background: #E9EBEE;
 				position: absolute;
-				top: 7px;
+				top: 6px;//2022.03.31
 				left: 0;
 			}
 			span {
-				font-size: 12px;
+				font-size: 12px !important;//2022.03.31
+				font-weight:400;//2022.03.31
 				color: #727982;
 			}
 		}
@@ -2528,10 +2629,12 @@ div.ap-sold-out-sticker-wrapper {
 	}
 }
 div.product-labels {
-	margin-bottom: 7px;
-	position: absolute;//2022.03.23
+	margin-bottom: 3px;//2022.03.29
+	position: static;//2022.03.23 //2022.03.29
 	top: 10px;//2022.03.23
 	right: auto;
+	display:flex;//2022.03.29
+	flex-wrap:wrap;//2022.03.29
 	flex-direction: row;
 	.product-label {
 		display: inline-block;
@@ -2541,16 +2644,18 @@ div.product-labels {
 		font-weight: 400;
 		padding: 0 4px;
 		border-radius: 2px;
-		+ .product-label {
-			margin-left: 4px;
+		margin:0 4px 4px 0;//2022.03.29
+		&:last-child {//2022.03.29
+			margin-right:0;
 		}
 	}
 	.product-label.new-label {
 		background-color: #38A1F9;
-		margin-bottom: 0 !important;
+		margin-bottom: 4px !important;//2022.03.29
 	}
 	.product-label.sale-label {
 		background-color: #D4415E !important;
+		margin-bottom: 4px !important;//2022.03.29
 	}
 	.product-label.only-label {
 		background-color: #FF9533;
@@ -2570,6 +2675,7 @@ div.product-labels {
 		.product-items {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content:space-between;
 		}
 		.product-item {
 			padding: 20px !important;
@@ -2583,7 +2689,7 @@ div.product-labels {
 			}
 			.product-item-info {
 				.product-item-details {
-					padding: 48px 0 0 !important;//2022.03.23
+					padding: 20px 0 0 !important;//2022.03.23 //2022.03.29
 					text-align: left;
 					.product-item-name {//2022.03.23
 						height:48px !important;
@@ -2839,7 +2945,43 @@ div.product-labels {
 			padding: 3px 5px 3px;
 		}
 	}
+	//2022.03.31 Start
+	.products-list {
+		.product-item {
+			.product-item-info {
+				.product-item-details {
+					.product-item-inner {
+						.product-item-actions {
+							.towishlist {
+								width:40px;
+								height:32px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	//2022.03.31 End
 }
+//2022.03.31 start
+@media only screen and (min-width:768px) and (max-width:1200px) {
+	.products-grid {
+		.product-items {
+			.product-item {
+				width:calc((100% - 60px)/3) !important;
+				&:nth-child(3n) {
+					margin: 0 !important;
+				}
+				&:nth-child(4n) {
+					margin: 0 20px 0 0 !important;
+				}
+			}
+		}
+	}
+}
+//2022.03.31 End
+
 //2022.03.28 Start
 @media only screen and (min-width:768px) and (max-width:1000px){
 	.products-grid .product-item {
@@ -2847,7 +2989,7 @@ div.product-labels {
 	}
 	div.product-labels{
 		div.product-label {
-			font-size:9px;
+			font-size:10px;
 		}
 	}
 }
@@ -3828,3 +3970,24 @@ div.product-labels {
 	}
 }
 /*----- [The 2nd range] Product detail 2022.03.02 End -----*/
+
+/*----- my page whish list 2022.03.31 Start -----*/
+.products-grid.wishlist {
+	margin-right:0;
+	.product-items {
+		padding:0;
+		.product-item {
+			width:100%;
+			.product-item-photo {
+				height:auto;
+				padding-top:0;
+			}
+			.price-box {
+				justify-content:center;
+			}
+		}
+	}
+}
+/*----- my page whish list 2022.03.31 End -----*/
+
+

@@ -15,7 +15,7 @@ require(['jquery'], function($) {
             if ($(window).width()< 768 && mode != "mo") {
                 mode = "mo";
             }
-            if ($(window).width() > 767 && mode != "pc") { // 2022.03.21
+            if ($(window).width() > 767 && mode != "pc") { // 2022.03.31
                 mode = "pc";
             }
         }chkMode();
