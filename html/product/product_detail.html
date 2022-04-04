@@ -942,7 +942,7 @@
                         $("#maincontent").after(u);
                     }
                 }
-                $(".box-tocart .actions").after('<div class="moved-add-to-links"></div>');
+                $(".box-tocart .actions").before('<div class="moved-add-to-links"></div>');//2022.04.04 after -> before
                 $(".product-social-links > .product-addto-links").appendTo(".moved-add-to-links");
                 $(".product-social-links > .action.mailto").appendTo(".moved-add-to-links");
             });
@@ -1004,7 +1004,7 @@
                     </style>
                     <div data-content-type="row" data-appearance="contained" data-element="main">
                         <div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{}" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" data-element="inner" data-pb-style="P2LEWD0">
-                            <figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="QOYXR8R"><a href="https://mcprod.www.illiyoon.com/" target="" data-link-type="default" title="" data-element="link"><img class="pagebuilder-mobile-hidden" src="https://integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/wysiwyg/illiyoon_logo.png" alt="" title="" data-element="desktop_image" data-pb-style="Q97I756"><img class="pagebuilder-mobile-only" src="https://integration-5ojmyuq-kuiylrj5lhklm.ap-3.magentosite.cloud/media/wysiwyg/illiyoon_logo.png" alt="" title="" data-element="mobile_image" data-pb-style="OJRVLRH"></a></figure>
+                            <figure data-content-type="image" data-appearance="full-width" data-element="main" data-pb-style="QOYXR8R"><a href="https://mcprod.www.illiyoon.com/" target="" data-link-type="default" title="" data-element="link"><img class="pagebuilder-mobile-hidden" src="../../media/images/illiyoon_logo.png" alt="" title="" data-element="desktop_image" data-pb-style="Q97I756"><img class="pagebuilder-mobile-only" src="../../media/images/illiyoon_logo.png" alt="" title="" data-element="mobile_image" data-pb-style="OJRVLRH"></a></figure>
                         </div>
                     </div>
                 </div>
@@ -1618,7 +1618,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="actions"> <button type="submit" title="장바구니" class="action primary tocart special" id="product-addtocart-button"><span>장바구니</span></button>
+
+                                        <div class="actions"> 
+                                            <button type="submit" title="장바구니" class="action primary tocart special" id="product-addtocart-button"><span>장바구니 담기</span></button><!-- 2022.04.04 fixed text : '장바구니' -> '장바구니 담기' -->
                                             <div id="instant-purchase" data-bind="scope:'instant-purchase'">
                                                 <!-- ko template: getTemplate() -->
                                                 <!-- /ko -->

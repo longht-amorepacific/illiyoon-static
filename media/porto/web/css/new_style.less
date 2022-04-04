@@ -156,7 +156,7 @@ span {
 		.panel.header {
 			.header.links {
 				>li {
-					padding: 12px 16px 11px;
+					padding: 16px 16px 17px;//2022.04.04
 					&:last-child {
 						padding-left: 25px;
 						position: relative;
@@ -167,7 +167,7 @@ span {
 							height: 15px;
 							background: #E9EBEE;
 							position: absolute;
-							top: 13px;
+							top: 17px;//2022.04.04
 							left: 4px;
 						}
 					}
@@ -193,8 +193,8 @@ span {
 		}
 		.header {
 			.custom-block {
-				left: 213px;
-				top: 38px;
+				left: 151px;//2022.04.04
+				top: 22px;//2022.04.04
 				right: auto;
 				margin-top: 0;
 				padding-right:0;//2022.03.31
@@ -236,9 +236,12 @@ span {
 	}
 	.header {
 		.logo {
-			margin: 30px 0 12px 4px;
+			margin: 23px 0 27px 4px;//2022.04.04
 			max-width: 195px;
 		}
+	}
+	.header.content {//2022.04.04
+		height:72px;
 	}
 	header.page-header.type2 {
 		a.my-account {
@@ -256,17 +259,32 @@ span {
 		}
 	}
 }
+
+//2022.04.04 Start
 @media only screen and (max-width: 1199px) {
 	.page-header.type2.header-newskin {
 		.header {
 			.custom-block {
 				margin-top: 0;
-				width: 170px;
-				top: 20px;
+				width: auto;
+				top: 22px;
 			}
 		}
 	}
 }
+@media only screen and (max-width: 992px) {
+	.page-header.type2.header-newskin {
+		.header {
+			.custom-block {
+				margin-top: 0;
+				width: 170px;
+				top: 22px;
+			}
+		}
+	}
+}
+ //2022.04.04 End
+
 @media only screen and (max-width: 767px) {
 	.header-up {
 		.page-header {
@@ -373,15 +391,16 @@ span {
 			vertical-align: middle;
 			input {
 				border: 0;
-				color: #727982;
+				color: #727982 !important;//2022.04.04
 				font-size: 16px;
 				line-height: 1.5;
 				padding: 8px 66px 8px 20px;
 				&::placeholder {
+					font-size:15px;//2022.04.04
 					line-height: 1.5;
 					position: static;
 					top: auto;
-					color: #727982;
+					color: #727982 !important;//2022.04.04
 				}
 			}
 		}
@@ -448,7 +467,7 @@ span {
 				&::placeholder {
 					line-height: 1.5;
 					color: #878F97;
-					font-size: 16px;
+					font-size: 15px;//2022.04.04
 				}
 			}
 		}
@@ -719,6 +738,7 @@ span {
 		.nav-sections {
 			position: relative;
 			background-color: #fff;
+			padding-top:16px;//2022.04.04
 			&::after {
 				content: '';
 				width: 100%;
@@ -753,7 +773,7 @@ span {
 					margin: 0 0 0 24px;
 				}
 				>a.level-top {
-					padding: 16px 12px;
+					padding: 15px 12px;//2022.04.04
 					font-size: 17px;
 					line-height: 1.3;
 					font-weight: 500;
@@ -1301,7 +1321,7 @@ span {
 					border-radius: 3px;
 					text-align: center;
 					margin: 0 4px;
-					&.active {// 2022.03.23
+					&.active {// 2022.03.23 //2022.04.04 border Check again
 						border: 1px solid #38A1F9;
 					}
 					>a {
@@ -1549,7 +1569,7 @@ span {
 			}
 		}
 	}
-	.events-index-index { // 2022.03.31
+	.events-index-index, .events-details-index{ // 2022.03.31 //2022.04.04
 		.page-top {
 			padding:0 24px;
 		}
@@ -1680,6 +1700,16 @@ span {
 		}
 	}
 }
+//2022.04.04 Start
+@media only screen and (min-width: 768px) {
+	.products.wrapper {
+		~ .toolbar.toolbar-products {
+			.pages {
+				float:none ;
+			}
+		}
+	}
+}//2022.04.04 End
 /*----- sub page - pager  End -----*/
 
 /*----- sub page breadcrumbs Start -----*/
@@ -1696,7 +1726,7 @@ span {
 	.page-wrapper {
 		>.breadcrumbs {
 			border: 0 !important;
-			padding: 15px 2px 14px;
+			padding: 14px 10px 14px;//2022.04.04
 			position: relative;
 			&::after {
 				content: '';
@@ -1725,7 +1755,7 @@ span {
 				li.item {
 					a {
 						font-size: 14px;
-						line-height: 1;//2022.03.31
+						line-height: 1.3;//2022.03.31 //2022.04.04
 						font-weight: 500;
 						cursor: default;
 						text-decoration: none;
@@ -1733,13 +1763,22 @@ span {
 					}
 					strong {
 						font-size: 14px;
-						line-height: normal;//2022.03.31
+						line-height: 1.3;//2022.03.31 //2022.04.04
 						font-weight: 500;
 						cursor: default;
 						text-decoration: none;
 						margin-top: 0;
 					}
 				}
+				//2022.04.04 Start
+				li.item.breadcrumbs-drop {
+					a {
+						cursor:pointer;
+					}
+					strong {
+						cursor:pointer;
+					}
+				}//2022.04.04 End
 			}
 			.item {
 				line-height: 1;
@@ -1754,14 +1793,14 @@ span {
 						height: 10px;
 						background: url('../../../images/icon/icon_breadcrumbs.png') no-repeat;
 						position: absolute;
-						top: 4px;
+						top: 5px;//2022.04.04
 						left: 0;
 					}
 				}
 			}
 			.item.home {
 				margin-right: 10px;
-				line-height: 1;//2022.03.31
+				line-height: 1.3;//2022.03.31 //2022.04.04
 			}
 			.item.breadcrumbs-drop {
 				display: inline-block;
@@ -1772,7 +1811,7 @@ span {
 					height: 12px;
 					background: transparent url('../../../images/icon/button_crumbs_open.png') no-repeat;
 					position: absolute;
-					top: 3px;
+					top: 4px;//2022.04.04
 					right: 0;
 					border: 0;
 					padding: 0;
@@ -1828,6 +1867,17 @@ span {
 	}
 	.page-header.sticky-header {
 		~ .breadcrumbs {
+			padding: 15px 10px 15px;//2022.04.04 Start
+			&::before { 
+				content:'';
+				width:100vw;
+				height:1px;
+				background:#E9EBEE;
+				position:absolute;
+				top:0;
+				left: 50%;
+				transform: translateX(-50%);
+			}//2022.04.04 End
 			&::after {
 				background: #E9EBEE;
 			}
@@ -2302,6 +2352,7 @@ span {
 						margin-right: 4px;
 						font-weight: 500;
 						color: #111;
+						font-family: 'Roboto','Spoqa Han Sans Neo',sans-serif;//2022.04.04
 					}
 				}
 				.old-price {
@@ -2309,6 +2360,7 @@ span {
 					margin-left: 4px;
 					span.price {
 						font-weight:400;
+						font-family: 'Roboto','Spoqa Han Sans Neo',sans-serif;//2022.04.04
 					}
 				}
 				.product-reviews-summary {
@@ -2371,6 +2423,8 @@ span {
 			&:before {
 				color: #E9EBEE;
 				font-size:12px !important;//2022.03.31
+				height:auto;//2022.04.04
+				line-height:20px;//2022.04.04
 			}
 		}
 		div.rating-result {
@@ -2379,6 +2433,8 @@ span {
 				&:before {
 					color: #FFBA33;
 					font-size:12px !important;//2022.03.31
+					height:auto;//2022.04.04
+					line-height:20px;//2022.04.04
 				}
 			}
 		}
@@ -2518,13 +2574,14 @@ div.product-reviews-summary {
 			text-decoration: none;
 			font-size: 12px !important;//2022.03.31
 			font-weight:400;//2022.03.31
+			color:#727982;//2022.04.04
 			&::before {
 				content: '';
 				width: 1px;
 				height: 10px;
 				background: #E9EBEE;
 				position: absolute;
-				top: 6px;//2022.03.31
+				top: 5px;//2022.03.31 //2022.04.04
 				left: 0;
 			}
 			span {
@@ -2675,7 +2732,7 @@ div.product-labels {
 		.product-items {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content:space-between;
+
 		}
 		.product-item {
 			padding: 20px !important;
@@ -2693,6 +2750,12 @@ div.product-labels {
 					text-align: left;
 					.product-item-name {//2022.03.23
 						height:48px !important;
+						margin-top:28px;//2022.04.04
+					}
+					div.product-labels {
+						~ .product-item-name {//2022.04.04
+							margin-top:0;
+						}
 					}
 				}
 			}
@@ -2784,7 +2847,7 @@ div.product-labels {
 					font-size: 13px;
 					line-height: 21px;
 					color: #878F97;
-				}
+				} 
 			}
 			span.price {
 				font-size: 20px;
@@ -2850,9 +2913,11 @@ div.product-labels {
 	}
 	div.product-reviews-summary {
 		.reviews-actions {
+			line-height:22px;//2022.04.04
 			a.view {
+				font-size: 14px !important;//2022.04.04
 				span {
-					font-size: 14px;
+					font-size: 14px !important;//2022.04.04
 				}
 			}
 		}
@@ -2945,6 +3010,7 @@ div.product-labels {
 			padding: 3px 5px 3px;
 		}
 	}
+
 	//2022.03.31 Start
 	.products-list {
 		.product-item {
@@ -3252,6 +3318,7 @@ div.product-labels {
 			border: 0;
 			padding: 2px 0;
 			text-align: center;
+			font-family:"Roboto", "Spoqa Han Sans Neo", sans-serif;//2022.04.04
 		}
 	}
 	.product-bottom-menu.open {
@@ -3627,6 +3694,7 @@ div.product-labels {
 				height: 26px;
 				line-height: 26px;
 				font-size: 20px;
+				font-weight:500;//2022.04.04
 				color: #111;
 				border: 0;
 				padding: 2px 0;
@@ -3869,6 +3937,19 @@ div.product-labels {
 			margin-bottom: 20px;
 		}
 	}
+	//2022.04.04 Start
+	#open_payment_info_group {
+		dd {
+			padding:0 24px;
+		}
+	}
+	#open_additional_info_group {
+		dd {
+			padding:0 24px;
+		}
+	}
+	//2022.04.04 End
+
 	.ui_accordion {
 		dl {
 			margin: 0;
@@ -3909,6 +3990,7 @@ div.product-labels {
 			top: 0;
 			left: calc(100% + 45px);
 			margin-bottom: 0;
+			flex-wrap:nowrap;//2022.04.04
 		}
 		.page-title-wrapper {
 			.page-title {
@@ -3922,6 +4004,7 @@ div.product-labels {
 			}
 		}
 		.product-info-main {
+			position:relative;//2022.04.04
 			padding-right: 5px;
 			padding-top: 30px;
 			padding: 30px 29px 0 24px;
@@ -3934,9 +4017,88 @@ div.product-labels {
 					margin: 0 0 10px;
 				}
 			}
-			.product-add-form {
-				padding: 16px 10px 16px 0;
+			//2022.04.04 Start
+			.product-reviews-summary {
+				padding: 0 0 48px 0;
 			}
+			.product-add-form {
+				padding:0;
+				border-bottom:0;
+				.box-tocart {
+					.fieldset {
+						.field.qty {
+							padding: 16px 10px 16px 0;
+							margin-bottom:10px;
+							.label {
+								top:19px;
+							}
+						}
+						>.actions {
+							display:inline-block;
+							width:calc(100% - 128px);
+							overflow:hidden;
+							margin-right:0;
+							.action.tocart {
+								display:block;	
+								width:100%;							
+								background-color:#38A1F9;
+								height:auto;
+								padding:15px 16px 16px;
+								margin:0;
+								border-radius: 3px;
+								border:0;
+								span {
+									color:#fff;
+									font-size:18px;
+									line-height:1.5;
+								}
+								&::before {
+									content:'';
+								}
+							}
+						}
+						.moved-add-to-links {
+							display:inline-block;
+							margin-right:8px;
+							.product-addto-links {
+								display:block;
+								border: 1px solid #727982;
+								border-radius: 3px;
+								.towishlist {
+									display:block;
+									background-color:transparent;
+									margin:0;
+									width:118px;
+									height:56px;
+									&::before {
+										content: '';
+										width: 100%;
+										height: 100%;
+										background: url('../../../images/icon/icon_detailfavorite_off.png') no-repeat;
+										background-size: 28px 28px;
+										background-position:center;
+									}
+									&:hover {
+										&::before {
+											background: url('../../../images/icon/icon_detailfavorite_on.png') no-repeat;
+											background-size: 28px 28px;
+										background-position:center;
+										}
+									}
+								}
+								.towishlist.on {
+									&::before {
+										background: url('../../../images/icon/icon_detailfavorite_on.png') no-repeat;
+										background-size: 28px 28px;
+										background-position:center;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			//2022.04.04 End
 		}
 		div.product-info-main {
 			.product-info-price {
@@ -3950,6 +4112,12 @@ div.product-labels {
 		.product.info.detailed {
 			margin-top: 103px;
 		}
+		.product-social-links {//2022.04.04 Start
+			width:auto;
+			position:absolute;
+			bottom:340px;
+			right:29px;
+		}//2022.04.04 End
 	}
 	.product.media {
 		margin: 0;
@@ -3957,7 +4125,38 @@ div.product-labels {
 	.gallery-placeholder {
 		margin-bottom: 0;
 	}
+	//2022.04.04 Start
+	.product.info.detailed {
+		.ui_accordion {
+			.additional-attributes {
+				>tbody {
+					>tr {
+						>th.label {
+							display:none;
+						}
+						>td {
+							padding:16px 0;
+						}
+					}
+				}
+			}
+		}
+	}//2022.04.04 End
 }
+@media (min-width: 768px) and (max-width: 991px) { //2022.04.04 Start
+	.catalog-product-view {
+		.product-add-form {
+			.box-tocart {
+				.fieldset {
+					.moved-add-to-links {
+						margin-top:0;
+					}
+				}
+			}
+		}	
+	}
+}//2022.04.04 End
+
 @media only screen and (max-width: 767px) {
 	.catalog-product-view {
 		&:not(.weltpixel-quickview-catalog-product-view) {
@@ -3968,6 +4167,24 @@ div.product-labels {
 			}
 		}
 	}
+	//2022.04.04 Start
+	.product.info.detailed {
+		.ui_accordion {
+			.additional-attributes {
+				>tbody {
+					>tr {
+						>td {
+							padding:16px 0;
+							font-size:14px;
+							&::before {
+								display:none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}//2022.04.04 End
 }
 /*----- [The 2nd range] Product detail 2022.03.02 End -----*/
 
@@ -3989,5 +4206,3 @@ div.product-labels {
 	}
 }
 /*----- my page whish list 2022.03.31 End -----*/
-
-

@@ -114,9 +114,10 @@ require(['jquery'], function($) {
         }
 
         //breadcrumbs
-        var $drop_btn = $('.breadcrumbs-btn');
-        $drop_btn.stop().click(function(){
-            var $bread_menu = $(this).parent('.breadcrumbs-drop');
+        var $drop_btn = $('.breadcrumbs-drop'); //2022.04.04
+        $drop_btn.stop().click(function(e){//2022.04.04
+            e.preventDefault();//2022.04.04
+            var $bread_menu = $(this);
             $('.breadcrumbs-drop').not($bread_menu).removeClass('drop-open');
             if($bread_menu.hasClass('drop-open')){
                 $bread_menu.removeClass('drop-open');
@@ -134,7 +135,7 @@ require(['jquery'], function($) {
             $(this).parents('.breadcrumbs-menu').find('li').removeClass('active');
             $bread_item_li.addClass('active');
             $bread_tit.text($bread_item_txt);
-            $('.breadcrumbs-drop').removeClass('drop-open');
+            $bread_item_li.removeClass('drop-open');//2022.04.04
 
             if($(this).parents('.breadcrumbs-drop').next('.breadcrumbs-drop').length){
                 var $next_bread = $(this).parents('.breadcrumbs-drop').next('.breadcrumbs-drop');
@@ -271,7 +272,26 @@ require(['jquery'], function($) {
         }
               
        
+        //2022.04.04
+        //cursor in GNB search input function
+        $(function () {
+            $('#search').focus(function () {
+                $(this).attr('data-text', $(this).attr('placeholder'));
+                $(this).removeAttr('placeholder');
+              }).blur(function () {
+                $(this).attr('placeholder', $(this).attr('data-text'));
+              });
+        });
 
+        //2022.04.04
+        //pc - product detail : product-social-links location
+        if (mode == 'pc') {
+            if($('.product-social-links').length){
+                var $addform_h = $('.product-add-form').outerHeight(); 
+                var $npay_h = $('.product-naver-pay').outerHeight(); 
+                $('.product-social-links').css('bottom', $addform_h + $npay_h + 10);
+            }
+        }
 
         
     });
