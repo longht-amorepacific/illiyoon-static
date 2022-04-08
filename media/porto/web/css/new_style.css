@@ -3520,7 +3520,7 @@ div.product-labels .product-label.only-label {
   }
   .account .column.main .my-page-top .my-order a .my-order-process li {
     list-style: none;
-    width: calc((100% - 64px)/5);
+    width: calc((100% - 48px)/4);
     text-align: center;
     margin-bottom: 0;
   }
@@ -3787,7 +3787,7 @@ div.product-labels .product-label.only-label {
   }
   .account .page-main .column.main .my-page-top .my-order a {
     display: block;
-    padding: 20px 32px 32px 32px;
+    padding: 20px 47px 32px 47px;
     text-decoration: none;
   }
   .account .page-main .column.main .my-page-top .my-order a .my-order-process ul {
@@ -3798,7 +3798,7 @@ div.product-labels .product-label.only-label {
   }
   .account .page-main .column.main .my-page-top .my-order a .my-order-process li {
     list-style: none;
-    width: calc((100% - 76px)/5);
+    width: calc((100% - 57px)/4);
     text-align: center;
     margin-bottom: 0;
   }
