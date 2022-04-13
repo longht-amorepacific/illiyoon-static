@@ -79,6 +79,7 @@ span {
   }
   .page-wrapper .page-header.type2.header-newskin > .main-panel-top {
     border-bottom: 1px solid #E9EBEE;
+    margin-bottom: 7px;
   }
   .container {
     padding: 0;
@@ -193,7 +194,7 @@ span {
     color: #111;
   }
   .page-header.type2.header-newskin .header .custom-block {
-    left: 151px;
+    left: 182px;
     top: 22px;
     right: auto;
     margin-top: 0;
@@ -223,8 +224,8 @@ span {
     text-decoration: none;
   }
   .header .logo {
-    margin: 23px 0 27px 4px;
-    max-width: 195px;
+    margin: 10px 0 14px 21px;
+    width: 161px;
   }
   .header.content {
     height: 72px;
@@ -233,7 +234,7 @@ span {
     display: inline-block;
     position: absolute;
     top: 0;
-    right: 60px;
+    right: 91px;
   }
   header.page-header.type2 a.my-account::after {
     content: '';
@@ -296,9 +297,9 @@ span {
   }
   .page-header.type2.header-newskin .logo {
     height: auto;
-    width: 117px;
+    width: 142px;
     margin: 0;
-    padding: 13px 0;
+    padding: 1px 0;
   }
   /* 2022.03.15 Start */
   .header.content {
@@ -309,7 +310,7 @@ span {
   .header > .nav-toggle {
     margin: 0;
     line-height: 44px;
-    margin-right: 20px;
+    margin-right: 7px;
   }
   header.page-header.type2 a.my-account {
     float: right;
@@ -336,7 +337,7 @@ span {
   .page-header.type2.header-newskin div.block-search {
     position: absolute;
     top: 16px;
-    right: 145px;
+    right: 176px;
     margin-left: 0;
     width: 300px;
     z-index: 10;
@@ -366,6 +367,7 @@ span {
   .page-header.type2.header-newskin .block-search .action.search {
     padding: 10px 20px;
     border-left: 0;
+    box-sizing: border-box;
   }
   .page-header.type2.header-newskin .block-search .action.search:before {
     content: "";
@@ -377,7 +379,7 @@ span {
 }
 @media only screen and (max-width: 991px) and (min-width: 768px) {
   .page-header.type2.header-newskin .header .block.block-search {
-    right: 120px;
+    right: 160px;
   }
 }
 /* 2022.03.11 Start */
@@ -568,7 +570,7 @@ span {
     border: 0;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 31px;
     margin: 0;
   }
   .page-header.type2.header-newskin .header.content .minicart-wrapper .action.showcart {
@@ -2356,7 +2358,7 @@ div.product-labels .product-label.only-label {
   .product-item .product-item-photo {
     border-radius: 8px;
   }
-  .product-item div.product-item-info .product-item-name a {
+  .product-item div.product-item-info .product-item-details .product-item-name a {
     font-size: 16px !important;
     line-height: 1.5;
   }
@@ -3663,6 +3665,7 @@ div.product-labels .product-label.only-label {
     margin-top: 20px;
   }
   .account .sidebar .block-collapsible-nav .block-collapsible-nav-content > .nav.items > .nav.item .nav.item a {
+    display: block;
     font-size: 18px;
     line-height: 1.5;
     font-weight: 500;
@@ -4027,6 +4030,7 @@ div.product-labels .product-label.only-label {
   }
   .account .page-main .sidebar .block-collapsible-nav .block-collapsible-nav-content > .nav.items > .nav.item .nav.item:hover a {
     color: #38A1F9;
+    text-decoration: none;
   }
   .account .page-main .sidebar .block-collapsible-nav .block-collapsible-nav-content > .nav.items > .nav.item .nav.item.current a {
     color: #38A1F9;
