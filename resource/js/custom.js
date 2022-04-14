@@ -293,6 +293,105 @@ require(['jquery'], function($) {
             }
         }
 
+        //2022.04.07 start
+        //select box
+        var $selectbox = $('.checkout-container .select');
+        $selectbox.each(function(){
+            var $select_idx = $(this).children('option:selected').index(); 
+            if ($select_idx > 0) {
+                $(this).addClass('selected');
+            } else {
+                $(this).removeClass('selected')
+            }
+
+            $(this).on("change", function(){
+                $select_idx = $(this).children('option:selected').index();
+                if ($select_idx > 0) {
+                    $(this).addClass('selected');
+                } else {
+                    $(this).removeClass('selected')
+                }
+            });
+        }); 
+
+        //input box
+        var $inputbox = $('.checkout-container .input-text');
+        $inputbox.each(function() {
+            $(this).focus(function () {
+                $(this).attr('data-text', $(this).attr('placeholder'));
+                $(this).removeAttr('placeholder');
+                if(!$(this).hasClass('active')){
+                    $(this).addClass('active');
+                }
+            }).blur(function () {
+                $(this).attr('placeholder', $(this).attr('data-text'));
+                if($(this).val().length){
+                    $(this).addClass('active');
+                }else {
+                    $(this).removeClass('active');
+                }
+            });
+            
+            if($(this).val().length){ ;
+                $(this).addClass('active');
+            }else {
+                $(this).removeClass('active');
+            }
+        });
+
+        //pc- select address type
+        function chkAddressType() {
+            if($('#existAddress').is(":checked")){ 
+                $('.pc-select-address .select-area').show();
+                $('.address-type-exist').show();
+                $('.address-type-new').hide();
+            }else {
+                $('.pc-select-address .select-area').hide();
+                $('.address-type-new').show();
+                $('.address-type-exist').hide();
+            }
+        }chkAddressType();
+        $('input[name=selAddress]').click(function() {
+            chkAddressType();
+        });
+        
+        //mobile toggle
+        if (mode == 'mo') {
+            var $motoggle = $('.mo-toggle-tit');
+            $motoggle.click(function(){
+            $motoggle.parent().toggleClass('toggle-open');
+            });
+           
+        }
+
+        //terms toggle
+        var $terms = $('.btn-terms');
+        $terms.click(function(){
+            $terms.parents('.opc-terms').toggleClass('toggle-open');
+        });
+        var $termPopClose = $('.payment-terms-popup .btn-close');
+        $termPopClose.click(function(){ 
+            $('.opc-terms').removeClass('toggle-open');
+        });
+
+        //checkout popup close
+        var $checkoutPopClose = $('.checkout-popup .btn-close');
+        $checkoutPopClose.click(function(){
+            $(this).parents('.checkout-popup').removeClass('open');
+            $('body').css('overflow', 'auto');
+        });
+        
+        //select adress popup 
+        var $checkoutPopBtn = $('.btn-checkout-popup');
+        $checkoutPopBtn.each(function(){
+            $(this).click(function(){
+                var $popup = $(this).data('pop');
+                $('.'+$popup).addClass('open');
+                $('body').css('overflow', 'hidden');
+            });
+        });
+        //2022.04.07 End
+        
         
     });
 });
