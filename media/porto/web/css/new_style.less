@@ -466,6 +466,7 @@ span {
 				margin: 0;
 				border-bottom: 2px solid #3D3935;
 				position: static;
+				border-radius:0;//2022.04.15
 				&::placeholder {
 					line-height: 1.5;
 					color: #878F97;
@@ -4256,6 +4257,25 @@ div.product-labels {
 /*----- my page whish list 2022.03.31 End -----*/
 
 /*----- #4 my page 2022.04.01 Start -----*/
+.account.wishlist-index-index {//2022.04.15 Start
+	.products-grid.wishlist {
+		.product-item {
+			.product-item-actions {
+				.tocart {
+					background-color:#eee;
+					span {
+						display:inline-block;
+					}
+				}
+			}
+			.price-box {
+				.price {
+					font-family: 'Roboto','Spoqa Han Sans Neo',sans-serif;
+				}
+			}
+		}
+	}
+}//2022.04.15 End
 @media only screen and (max-width: 767px) {
 	.account {
 		.page.messages {
@@ -4472,7 +4492,7 @@ div.product-labels {
 								+.nav.item {
 									margin-top:20px;
 								}
-								a {
+								a, strong {//2022.04.15
 									display:block;//2022.04.13
 									font-size:18px;
 									line-height:1.5;
@@ -4495,12 +4515,13 @@ div.product-labels {
 										right:0;
 									}
 								}
-								strong {
-									&::before {
-										content:none;
-									}
-								}
 							}
+							.nav.item.current {//2022.04.15 Start
+								a,strong {
+									color:#38A1F9 !important;
+									text-decoration:none;
+								}
+							}//2022.04.15 End
 						}
 					}
 					.nav.item {
@@ -4559,6 +4580,13 @@ div.product-labels {
 			display:none;
 		}
 	}
+	.account.wishlist-index-index {//2022.04.15 Start
+		.products-grid.wishlist {
+			.product-item {
+				padding:20px 0 10px;
+			}
+		}
+	}//2022.04.15 End
 }
 @media only screen and (min-width: 768px) {
 	.account {
@@ -4847,6 +4875,11 @@ div.product-labels {
 						
 					}
 				}
+				.products-list {//2022.04.15 Start
+					.product-image-wrapper {
+						padding-bottom:100% !important;
+					}
+				}//2022.04.15 End
 			}
 			.sidebar{
 				width:203px;
@@ -4884,7 +4917,13 @@ div.product-labels {
 											content:none;
 										}
 									}
-									strong {
+									strong {//2022.04.15 Start
+										font-size:15px;
+										line-height:1.5;
+										font-weight:400;
+										color:#111;
+										padding:0;
+										//2022.04.15 End
 										&::before {
 											content:none;
 										}
@@ -4897,8 +4936,8 @@ div.product-labels {
 									}
 								}
 								.nav.item.current {
-									a {
-										color:#38A1F9;
+									a, strong {//2022.04.15
+										color:#38A1F9 !important;//2022.04.15
 										text-decoration:none;
 									}
 								}
