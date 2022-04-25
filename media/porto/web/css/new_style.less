@@ -5537,6 +5537,9 @@ div.product-labels {
 										display:inline-block;
 									}
 								}
+								.field.choice2 {//2022.04.25
+									display:none;
+								}
 							}
 						}
 						&::before {
@@ -6126,6 +6129,7 @@ div.product-labels {
 								.address {
 									.field{
 										margin:0;
+										border-bottom:1px solid #E9EBEE;//2022.04.25
 										.label {
 											margin-bottom:4px;
 											span {
@@ -6204,7 +6208,7 @@ div.product-labels {
 										}
 									}
 									.field.tel {
-										margin-top:8px;
+										margin-top:0;//2022.04.25
 										.control {
 											display:flex;
 											justify-content:space-between;
@@ -6220,6 +6224,16 @@ div.product-labels {
 								.field.choice {
 									display:none;
 								}
+								.field.choice2 {//2022.04.25 Start
+									display:block;
+									padding:16px 0 16px 16px;
+									font-size:0;
+									.label {
+										padding-left:28px;
+										width:100%;
+										margin-bottom:0;
+									}
+								}//2022.04.25 End
 							}
 							.field {
 								display:flex;

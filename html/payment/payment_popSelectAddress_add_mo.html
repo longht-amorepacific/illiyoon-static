@@ -1250,6 +1250,14 @@
                                                                 <span data-bind="i18n: 'Save in address book'">기본 배송지로 추가</span>
                                                             </label>
                                                         </div>
+                                                        <!-- 2022.04.25 Start -->
+                                                        <div class="field choice2" data-bind="visible: !isFormInline">
+                                                            <input type="checkbox" class="checkbox" id="shipping-save-in-list" 
+                                                            data-bind="checked: saveInAddressBook" checked="checked"><label class="label" for="shipping-save-in-list">
+                                                                <span data-bind="i18n: 'Save in address book'">배송지 목록에 추가</span>
+                                                            </label>
+                                                        </div>
+                                                        <!-- 2022.04.25 End -->
                                                     </div>
                                                 </form>
                                             </div>
