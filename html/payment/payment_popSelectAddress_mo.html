@@ -1499,6 +1499,53 @@
                                                         </form>
                                                     </div>
                                                 </div>
+
+                                                <!-- 2022.05.10 Start -->
+                                                <div class="payment-option opc-payment-additional rewardpoints"
+                                                    id="reward_placer">
+                                                    <div class="payment-option-form">
+                                                        <div class="payment-option-title">
+                                                            <span>
+                                                                <!-- ko i18n: 'Beauty Point Payment'-->
+                                                                <span>뷰티포인트 결제</span>
+                                                                <!-- /ko -->
+                                                            </span>
+                                                        </div>
+                                                        <div class="payment-option-content field choice">
+                                                            <div class="payment-option-inner">
+                                                                <span class="tit">보유 포인트</span>
+                                                                <span><span class="point">51,234</span><span>P</span></span>
+                                                            </div>
+                                                            <div class="actions-toolbar"
+                                                                id="reward-points-buttons-container">
+                                                                <div class="primary">
+                                                                    <span class="input-point">
+                                                                        <input type="text" id="apply-point" title="beatypoint" class="input-text" value="5,000"><!-- If there is no beauty point, input status is disabled -->
+                                                                        <strong>P</strong>
+                                                                    </span>
+                                                                    <button class="action action-entire"><!-- If the button is disabled, add class "action-entire-disabled" -->
+                                                                        <span>전액사용</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="payment-option-note">
+                                                        <button type="button" class="btn-point-notice btn-toggle">뷰티포인트 결제 유의사항 전문보기</button>
+                                                        <div class="list-point-notice">
+                                                            <ul class="dot-list">
+                                                                <li>보유한 뷰티포인트는 10P 단위로 결제 금액에서 차감하여 사용이 가능합니다.</li>
+                                                                <li>배송비는 뷰티포인트로 결제하실 수 없습니다.</li>
+                                                                <li>뷰티포인트를 사용하여 전체 금액 결제 시, 스페셜기프트 사은품과 기프트카드는 증정에서 제외됩니다.</li>
+                                                                <li>2개 이상이 상품 구매 시, 최종 결제 금액 비중으로 포인트 사용이 자동으로 배분되어 결제됩니다.</li>
+                                                                <li>뷰티포인트 전용 상품 구매 시, 전용 상품에 포인트가 먼저 적용되고 남은 상품에 배분됩니다.</li>
+                                                                <li>뷰티포인트 사용 주문 건의 취소 반품 환불 시 사용된 포인트는 처리 완료 시점에 자동 복구됩니다.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- 2022.05.10 End -->
+
                                                 <div id="checkout-payment-method-load" class="opc-payment"
                                                     data-bind="visible: isPaymentMethodsAvailable" style="">
                                                     <div class="items payment-methods">
@@ -1525,46 +1572,6 @@
                                                     </div>
                                                 </div>
                                                 
-                                                <div class="payment-option opc-payment-additional rewardpoints"
-                                                    id="reward_placer">
-                                                    <div class="payment-option-form">
-                                                        <div class="payment-option-title">
-                                                            <span>
-                                                                <!-- ko i18n: 'Beauty Point Payment'--><span>뷰티포인트 결제
-                                                                </span><!-- /ko --></span>
-                                                        </div>
-                                                        <div class="payment-option-content field choice">
-                                                            <div class="payment-option-inner">
-                                                                <span data-bind="html: $t(label)">사용가능 0P / 보유 0P</span>
-                                                            </div>
-                                                            <div class="actions-toolbar"
-                                                                id="reward-points-buttons-container">
-                                                                <div class="primary">
-                                                                    <input type="number" id="apply-point"
-                                                                        data-bind="disable: isPointRemoved(), value: getInputPoints()"><span><strong>P</strong></span>
-                                                                    <button class="action action-use"
-                                                                        data-bind="click: useRewardPoints, visible: isPointApplied() ">
-                                                                        <span>
-                                                                            <!-- ko i18n: 'Apply Points'--><span>적용</span>
-                                                                            <!-- /ko --></span>
-                                                                    </button>
-                                                                    <button class="action action-remove"
-                                                                        data-bind="click: removeRewardPoints, visible: isPointRemoved()"
-                                                                        style="display: none;">
-                                                                        <span>
-                                                                            <!-- ko i18n: 'Cancel Points'--><span>적용취소</span>
-                                                                            <!-- /ko --></span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="payment-option-note">
-                                                        <span>
-                                                            <!-- ko i18n: 'Beauty Points can not apply to shipping fee.'--><span>※배송비는
-                                                                뷰티포인트로 결제가 불가합니다.</span><!-- /ko --></span>
-                                                    </div>
-                                                </div>
                                             </fieldset>
                                         </form>
                                     </div>
@@ -1593,6 +1600,12 @@
                                         <span class="label">쿠폰/코드 할인</span>
                                         <span class="price">-9,503원</span>
                                     </li>
+                                    <!-- 2022.05.10 beauty-point Start -->
+                                    <li>
+                                        <span class="label">뷰티포인트</span>
+                                        <span class="price">-5,000원</span>
+                                    </li>
+                                     <!-- 2022.05.10 beauty-point End -->
                                 </ul>
                                 <ul class="total">
                                     <li>

@@ -29,7 +29,7 @@
         .title td {border-top:2px solid #242424;color:#000;}
         table td.center {text-align:center;}
         table td a {color:#999;}
-        table tr.point td {background-color:rgba(235, 143, 52, .3);}
+        table tr.point td {background-color:rgba(235, 143, 52, .1);}
         .noticeArea {padding:20px 30px 0;}
         .noticeArea li {line-height:1.5;color:#000;}
         .noticeArea li.red {line-height:1.5;color:#fff;background-color:#D4415E;padding:5px 0;}
@@ -43,12 +43,11 @@
     <div class="wrap">
         <header>
             <h1><span>ILLIYOON</span> Publishing Page List</h1>
-            <span class="date">Update. 2022.04.07</span>
+            <span class="date">Update. 2022.05.10</span>
         </header>
         <div class="noticeArea">
             <ul>
-                <li class="red">- Design Link : <a href="https://www.figma.com/file/pRohEejYxKp3WU0szXv5XM/Design_ILLYOON?node-id=1678%3A11301" target="_blank">https://www.figma.com/file/pRohEejYxKp3WU0szXv5XM/Design_ILLYOON?node-id=1678%3A11301</a></li>
-                <li><span class="redline">- Source for #5(payment) is annotated as <strong>2022.04.07</strong></span></li>
+                <li>- Source for #5(payment) is annotated as <strong>2022.04.07</strong></li>
                 <li>- Source for #4(my page) is annotated as <strong>2022.04.01</strong></li>
                 <li>- Source for #3(product detail) is annotated as <strong>2022.03.02</strong></li>
                 <li>- Source for #1(common) is annotated as <strong>2022.02.22</strong></li>
@@ -193,68 +192,78 @@
                     <tr class="title">
                         <td colspan="7">My Page(#4)</td>
                     </tr>
-                    <tr>
+                    <tr class="point">
                         <td rowspan="2">my page</td>
-                        <td></td>
-                        <td></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
                         <td>mypage</td>
                         <td><a href="html/mypage/mypage.html" target="_blank">html/mypage/mypage.html</a></td>
                         <td></td>
-                        <td></td>
+                        <td>
+                            [2022.05.10] Add Beauty-Point Area
+                        </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
                         <td>mypage_orderStatus</td>
                         <td><a href="html/mypage/mypage_orderStatus.html" target="_blank">html/mypage/mypage_orderStatus.html</a></td>
                         <td></td>
                         <td></td>
                     </tr>
-                    <tr class="title point">
-                        <td colspan="7">Payment(#5)</td>
+                    <tr class="title">
+                        <td colspan="8">Payment(#5)</td>
                     </tr>
                     <tr class="point">
-                        <td rowspan="7">payment</td>
-                        <td rowspan="7"></td>
-                        <td rowspan="7"></td>
+                        <td rowspan="8">payment</td>
+                        <td rowspan="8"></td>
+                        <td rowspan="8"></td>
                         <td>payment</td>
                         <td>
                             <a href="html/payment/payment.html" target="_blank">html/payment/payment.html</a><br>
                         </td>
                         <td></td>
-                        <td></td>
+                        <td>
+                            [2022.05.10] Add Beauty-Point usage area
+                        </td>
                     </tr>
                     <tr class="point">
+                        <td>payment_beautypoint_disabled</td>
+                        <td><a href="html/payment/payment_beautypoint_disabled.html" target="_blank">html/payment/payment_beautypoint_disabled.html</a></td>
+                        <td></td>
+                        <td>
+                            [2022.05.10] Add Beauty-Point usage area (case: no beauty point)
+                        </td>
+                    </tr>
+                    <tr>
                         <td>payment_noAddress</td>
                         <td><a href="html/payment/payment_noAddress.html" target="_blank">html/payment/payment_noAddress.html</a></td>
                         <td></td>
                         <td>[2022.04.25] add a check box in pc ver "add to shipping address list(배송지 목록에 추가)"</td>
                     </tr>
-                    <tr class="point">
+                    <tr>
                         <td>payment_popTerms_mo</td>
                         <td><a href="html/payment/payment_popTerms_mo.html" target="_blank">html/payment/payment_popTerms_mo.html</a></td>
                         <td>no registered address</td>
                         <td></td>
                     </tr>
-                    <tr class="point">
+                    <tr>
                         <td>payment_popSelectAddress_mo</td>
                         <td><a href="html/payment/payment_popSelectAddress_mo.html" target="_blank">html/payment/payment_popSelectAddress_mo.html</a></td>
                         <td>mobile layer popup</td>
                         <td></td>
                     </tr>
-                    <tr class="point">
+                    <tr>
                         <td>payment_popSelectAddress_add_mo</td>
                         <td><a href="html/payment/payment_popSelectAddress_add_mo.html" target="_blank">html/payment/payment_popSelectAddress_add_mo.html</a></td>
                         <td>mobile layer popup</td>
                         <td></td>
                     </tr>
-                    <tr class="point">
+                    <tr>
                         <td>payment_popSelectAddress_modify</td>
                         <td><a href="html/payment/payment_popSelectAddress_modify_mo.html" target="_blank">html/payment/payment_popSelectAddress_modify_mo.html</a></td>
                         <td>mobile layer popup</td>
                         <td></td>
                     </tr>
-                    <tr class="point">
+                    <tr>
                         <td>payment_alert</td>
                         <td><a href="html/payment/payment_alert.html" target="_blank">html/payment/payment_alert.html</a></td>
                         <td>alert layer popup</td>

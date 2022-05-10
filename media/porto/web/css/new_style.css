@@ -4091,7 +4091,7 @@ div.product-labels .product-label.only-label {
   color: #111;
   line-height: 1.3;
   border-radius: 3px;
-  height: auto;
+  height: 44px;
 }
 .checkout-index-index .input-text::placeholder,
 .checkout-index-index .textarea::placeholder {
@@ -4204,6 +4204,34 @@ div.product-labels .product-label.only-label {
 }
 .checkout-index-index .checkout-container .address-type {
   display: none;
+}
+.checkout-index-index .dot-list {
+  padding: 0;
+  margin: 0;
+}
+.checkout-index-index .dot-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #727982;
+  line-height: 1.3;
+  margin: 0;
+  list-style: none;
+}
+.checkout-index-index .dot-list li + li {
+  margin-top: 10px;
+}
+.checkout-index-index .dot-list li::before {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: #727982;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 7px;
 }
 @media only screen and (max-width: 767px) {
   .checkout-index-index .page-wrapper .page-header .minicart-wrapper {
@@ -4878,8 +4906,136 @@ div.product-labels .product-label.only-label {
     bottom: 0;
     left: 0;
   }
-  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints {
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-title {
+    margin-bottom: 18px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-title span {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #111;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .payment-option-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .payment-option-inner .tit {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #727982;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .payment-option-inner span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #454E57;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .payment-option-inner span .point {
+    display: inline-block;
+    margin-right: 2px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar {
+    position: static;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .primary {
+    display: flex;
+    justify-content: space-between;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .input-point {
+    position: relative;
+    width: calc(100% - 95px);
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .input-point strong {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #111;
+    position: absolute;
+    top: 13px;
+    right: 16px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .input-point input {
+    text-align: right;
+    width: 100%;
+    padding: 10px 29px 11px 16px;
+    line-height: 1.5;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .input-point input:disabled + strong {
+    color: #878F97;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire {
+    padding: 10px 16px;
+    border: 1px solid #38A1F9;
+    border-radius: 3px;
+    line-height: 1;
+    height: auto;
+    width: auto;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire:hover {
+    background: #fff;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire span {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #38A1F9;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire-disabled {
+    cursor: default;
+    border: 1px solid #C5C8CE;
+    background-color: #F7F8F9;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire-disabled span {
+    color: #C5C8CE;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire-disabled:hover {
+    background-color: #F7F8F9;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note {
+    background: #F7F8F9;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note .btn-point-notice {
+    position: relative;
+    height: auto;
+    width: 100%;
+    border: 0;
+    padding: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #727982;
+    background: transparent;
+    text-align: left;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note .btn-point-notice:visited {
+    text-decoration: none;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note .btn-point-notice::after {
+    content: '';
+    width: 11px;
+    height: 7px;
+    background: url('../../../images/icon/toggle_arrow_list_mo.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 21px;
+    top: 21px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note .list-point-notice {
     display: none;
+    padding: 0 10px 16px 16px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note.toggle-open .list-point-notice {
+    display: block;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note.toggle-open .btn-point-notice::after {
+    transform: rotate(180deg);
   }
   .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .opc-payment {
     padding: 20px 0 32px;
@@ -5458,9 +5614,13 @@ div.product-labels .product-label.only-label {
     color: #111;
   }
   .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option .payment-option-content {
-    padding: 0 0 0 24px;
+    padding: 0 24px;
     max-width: 448px;
     position: relative;
+    box-sizing: content-box;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option .payment-option-content .payment-option-inner {
+    margin-bottom: 0;
   }
   .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option .payment-option-content .payment-option-inner .label {
     display: none;
@@ -5489,7 +5649,7 @@ div.product-labels .product-label.only-label {
     width: 59px;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 24px;
   }
   .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option .payment-option-content .actions-toolbar .action.action-apply {
     background-color: #38A1F9;
@@ -5506,8 +5666,143 @@ div.product-labels .product-label.only-label {
     color: #fff;
     font-weight: 500;
   }
-  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints {
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-title {
+    margin-bottom: 32px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-title span {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #111;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .payment-option-inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .payment-option-inner .tit {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #727982;
+    margin-right: 10px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .payment-option-inner span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #454E57;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .payment-option-inner span .point {
+    display: inline-block;
+    margin-right: 2px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar {
+    position: static;
+    display: block;
+    width: auto;
+    margin-left: 0;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .primary {
+    display: flex;
+    justify-content: space-between;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .input-point {
+    position: relative;
+    width: 120px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .input-point strong {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #111;
+    position: absolute;
+    top: 13px;
+    right: 16px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .input-point input {
+    text-align: right;
+    width: 100%;
+    padding: 10px 29px 11px 16px;
+    line-height: 1.5;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .input-point input:disabled + strong {
+    color: #878F97;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire {
+    padding: 10px 16px;
+    border: 1px solid #38A1F9;
+    border-radius: 3px;
+    line-height: 1;
+    height: auto;
+    width: auto;
+    margin: 0 0 0 8px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire:hover {
+    background: #fff;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire span {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #38A1F9;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire-disabled {
+    cursor: default;
+    border: 1px solid #C5C8CE;
+    background-color: #F7F8F9;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire-disabled span {
+    color: #C5C8CE;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-content .actions-toolbar .action-entire-disabled:hover {
+    background-color: #F7F8F9;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note {
+    background: #F7F8F9;
+    max-width: 448px;
+    margin: 10px 24px 0 24px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note .btn-point-notice {
+    position: relative;
+    height: auto;
+    width: 100%;
+    border: 0;
+    padding: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #727982;
+    background: transparent;
+    text-align: left;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note .btn-point-notice:visited {
+    text-decoration: none;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note .btn-point-notice::after {
+    content: '';
+    width: 11px;
+    height: 7px;
+    background: url('../../../images/icon/toggle_arrow_list_mo.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 21px;
+    top: 21px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note .list-point-notice {
     display: none;
+    padding: 0 10px 16px 16px;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note.toggle-open .list-point-notice {
+    display: block;
+  }
+  .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .payment-option.rewardpoints .payment-option-note.toggle-open .btn-point-notice::after {
+    transform: rotate(180deg);
   }
   .checkout-index-index .checkout-container .opc-wrapper .opc .checkout-payment-method .step-content .opc-payment {
     padding: 0;
@@ -5646,7 +5941,7 @@ div.product-labels .product-label.only-label {
     width: 32.08%;
     position: absolute;
     right: 0;
-    top: 302px;
+    top: 330px;
     border: 1px solid #454E57;
     border-top: 0;
     padding: 20px 29px;

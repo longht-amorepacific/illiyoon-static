@@ -391,7 +391,13 @@ require(['jquery'], function($) {
             });
         });
         //2022.04.07 End
-        
+
+        //2022.05.09 Start
+        var $btnToggle = $('.btn-toggle');
+        $btnToggle.click(function(){
+            $btnToggle.parent().toggleClass('toggle-open');
+        });
+        //2022.05.09 End
         
     });
 });
