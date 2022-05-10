@@ -4295,11 +4295,14 @@ div.product-labels {
 					font-size:18px;
 					line-height:1.5;
 					color:#111;
+					display:flex;//2022.05.10
+					align-items:center;//2022.05.10
 					p {
 						font-weight:400;					
 						margin:0;
 					}
 					.customer-info {
+						margin-right:4px;//2022.05.10
 						p {
 							font-weight:500;
 						}
@@ -4353,7 +4356,7 @@ div.product-labels {
 				.my-order {
 					margin-top:16px;
 					background: #FFFFFF;
-					box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+					box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07);//2022.05.10
 					border-radius: 8px;
 					a {
 						display:block;
@@ -4412,12 +4415,23 @@ div.product-labels {
 				}
 				.my-review {
 					margin-top:16px;
-					background:#EFF7FF;
+					//background:#EFF7FF;//2022.05.10 delete background
 					border-radius:8px;
 					a {
 						display:block;
-						padding:16px;	
+						padding:16px 16px 16px 56px;//2022.05.10	
+						position:relative;//2022.05.10
 						text-decoration:none;
+						&::before {//2022.05.10 Start
+							content:'';
+							width:48px;
+							height:48px;
+							background:url('../../../images/icon/icon_my_review.png') no-repeat;
+							background-size:contain;
+							position:absolute;
+							top:16px;
+							left:0;
+						}//2022.05.10 End
 						.my-review-title {
 							margin-bottom:4px;
 						}
@@ -4430,6 +4444,46 @@ div.product-labels {
 						}
 					}
 				}
+				.my-point {//2022.05.10 Start
+					margin-top:16px;
+					>a {
+						display:block;
+						padding:14px 16px;
+						text-decoration:none;
+						background:#EFF7FF;
+						border-radius:8px;
+						&:active {
+							text-decoration:none;
+						}
+					}
+					.my-top-title {
+						display:flex;
+						justify-content:space-between;
+						align-items:center;
+						margin-bottom:0;
+						padding:0;
+						span {
+							font-size:14px;
+							font-weight:500;
+							line-height:1.3;
+							color:#454E57;
+						}
+						.point {
+							display:inline-block;
+							font-size:18px;
+							line-height:1.66;
+							color:#38A1F9;
+							font-weight:500;
+							padding:0 28px 0 0;
+						}
+						.my-btn-more {
+							font-size:0;
+							span {
+								font-size:0;
+							}
+						}
+					}
+				}//2022.05.10 End
 			}			
 			.my-page-reco {
 				display:none;
@@ -4603,6 +4657,7 @@ div.product-labels {
 				padding:0;
 				.my-page-top {
 					padding:20px;
+					position:relative;//2022.05.10
 					.welcome{
 						font-size:17px;
 						line-height:1.3;
@@ -4671,9 +4726,10 @@ div.product-labels {
 					.my-order {
 						background: #F7F8F9;
 						border-radius: 10px;
+						margin-top:20px;//2022.05.10
 						a {
 							display:block;
-							padding:20px 47px 32px 47px;
+							padding:20px 32px 32px 32px;//2022.05.10
 							text-decoration:none;
 							.my-order-process {
 								ul {
@@ -4729,10 +4785,17 @@ div.product-labels {
 					.my-review {
 						background: #EFF7FF;
 						border-radius: 10px;
-						margin-top:20px;
+						//2022.05.10 Start
+						position:absolute;
+						top:62px;
+						right:20px;
+						width:calc(50% - 30px);
+						margin-left:10px;
+						//2022.05.10 End
 						a {
 							display:block;
-							padding:20px 32px 32px;
+							padding:20px 32px 0;//2022.05.10
+							height:105px;//2022.05.10
 							text-decoration:none;
 							.my-review-title {
 								margin-bottom:4px;
@@ -4746,6 +4809,29 @@ div.product-labels {
 							}
 						}
 					}
+					.my-point {//2022.05.10 Start
+						width:calc(50% - 10px);
+						margin-right:10px;
+						background: #EFF7FF;
+						border-radius: 10px;
+						>a {
+							display:block;
+							height:105px;
+							padding:20px 32px;
+							.my-point-title {
+								margin-bottom:0;
+								.point {
+									font-size:24px;
+									color:#38A1F9;
+									line-height:1.16;
+									font-weight:500;
+									position:absolute;
+									bottom:-30px;
+									right:0;
+								}
+							}
+						}
+					}//2022.05.10 End
 				}
 				.my-page-reco {
 					padding:20px 0;
@@ -4958,6 +5044,31 @@ div.product-labels {
 		
 	}
 }
+@media only screen and (min-width: 768px) and (max-width:991px) { //2022.05.10 Start
+	.account {
+		.page-main {
+			.column.main {
+				.my-page-top {
+					.my-order {
+						a {
+							padding:20px 20px 32px 20px;
+						}
+					}
+					.my-review {
+						a {
+							padding:20px 20px 0;
+						}
+					}
+					.my-point {
+						a {
+							padding:20px 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}//2022.05.10 End
 @media only screen and (min-width: 768px) and (max-width:1200px) {
 	.account {
 		.page-main {
